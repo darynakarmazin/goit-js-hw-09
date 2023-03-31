@@ -30,6 +30,7 @@ const options = {
     }
 
     buttonStart.addEventListener('click', interval);
+
     function interval() {
       intervalId = setInterval(timer, 1000);
     }
