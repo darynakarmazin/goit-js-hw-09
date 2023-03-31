@@ -28,3 +28,22 @@ img {
 .wraper {
   text-align: center;
 }
+.timer {
+  background-color: beige;
+  border-radius: 10px;
+  border-color: gold;
+  display: flex;
+  max-width: 450px;
+  padding: 25px;
+  gap: 25px;
+}
+.button-timer {
+  padding: 5px 10px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+  border-color: #fff;
+}
+.button-timer[disabled] {
+  background-color: gray;
+}

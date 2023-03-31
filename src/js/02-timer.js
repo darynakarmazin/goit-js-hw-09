@@ -18,9 +18,6 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.log(selectedDates[0]);
-
-    const currentDate = new Date();
     if (selectedDates[0] < new Date()) {
       buttonStart.setAttribute('disabled', 'disabled');
       Notiflix.Notify.failure(
@@ -32,17 +29,19 @@ const options = {
       buttonStart.removeAttribute('disabled', 'disabled');
     }
 
-    buttonStart.addEventListener('click', () => {
-      intervalId = setInterval(() => {
-        const delta = selectedDates[0] - new Date();
+    buttonStart.addEventListener('click', interval);
+    function interval() {
+      intervalId = setInterval(timer, 1000);
+    }
+    function timer() {
+      const delta = selectedDates[0] - new Date();
 
-        if (delta < 1000) {
-          clearInterval(intervalId);
-        }
-        const formatDelta = convertMs(delta);
-        renderDate(formatDelta);
-      }, 1000);
-    });
+      if (delta < 1000) {
+        clearInterval(intervalId);
+      }
+      const formatDelta = convertMs(delta);
+      renderDate(formatDelta);
+    }
   },
 };
 
