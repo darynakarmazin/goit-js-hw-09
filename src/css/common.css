@@ -29,14 +29,26 @@ img {
   text-align: center;
 }
 .timer {
-  background-color: beige;
-  border-radius: 10px;
-  border-color: gold;
   display: flex;
-  max-width: 450px;
-  padding: 25px;
-  gap: 25px;
 }
+div .field{
+   background-color: #000000;
+   color: #ffffff;
+   width: 125px;
+   height: 105px;
+   border-radius: 5px;
+   font-size: 30px;
+   font-weight: 600;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+#timer div span {
+   display: block;
+   margin-top: -2px;
+   font-size: 15px;
+   font-weight: 400;
+}
+
 .button-timer {
   padding: 5px 10px;
   background-color: blue;
