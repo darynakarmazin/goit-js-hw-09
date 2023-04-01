@@ -28,5 +28,5 @@ function offChangeColorBody(event) {
 
 function changeColor(event) {
   let randomHexColor = getRandomHexColor();
-  bodyEl.style.backgroundColor = RandomHexColor;
+  bodyEl.style.backgroundColor = randomHexColor;
 }
