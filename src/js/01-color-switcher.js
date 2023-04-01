@@ -17,16 +17,16 @@ function onChangeColorBody(event) {
   timerId = setInterval(changeColor, 1000);
 
   buttonStart.setAttribute('disabled', 'disabled');
-  buttonStop.removeAttribute('disabled', 'disabled');
+  buttonStop.removeAttribute('disabled');
 }
 
 function offChangeColorBody(event) {
   clearInterval(timerId);
   buttonStop.setAttribute('disabled', 'disabled');
-  buttonStart.removeAttribute('disabled', 'disabled');
+  buttonStart.removeAttribute('disabled');
 }
 
 function changeColor(event) {
-  let RandomHexColor = getRandomHexColor();
+  let randomHexColor = getRandomHexColor();
   bodyEl.style.backgroundColor = RandomHexColor;
 }
